@@ -69,7 +69,6 @@ name: "Sidebar-categories",
 .active {
   color: #272829;
   border-right: 3px solid #5E81F4;
-  stroke: #5E81F4;
 }
 
 </style>
