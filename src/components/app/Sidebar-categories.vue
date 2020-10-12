@@ -25,8 +25,8 @@ name: "Sidebar-categories",
   data() {
     return {
       categories: [
-        {title: 'Dashboard', image: 'image_1.svg', url: 'dashboard'},
-        {title: 'All courses', image: 'image_2.svg', url: ''},
+        {title: 'Dashboard',image: 'image_1.svg', url: 'dashboard'},
+        {title: 'All courses', image: 'image_2.svg', url: 'tab_1'},
         {title: 'Resources', image: 'image_3.svg', url: 'resources'},
         {title: 'Friends', image: 'image_4.svg', url: 'friends'},
         {title: 'Chats', image: 'image_5.svg', url: 'chats'},

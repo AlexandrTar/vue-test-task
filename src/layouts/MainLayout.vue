@@ -20,7 +20,9 @@
         </div>
       </div>
     </div>
-    <router-view />
+    <transition name="fade">
+      <router-view />
+    </transition>
   </div>
 </template>
 
@@ -112,4 +114,19 @@ name: "mainLayout",
     padding: 16px 44px;
     font-size: 16px;
   }
+
+.fade-enter-active,
+.fade-leave-active {
+  transition-property: opacity;
+  transition-duration: 0.15s;
+}
+
+.fade-enter-active {
+  transition-delay: 0.15s;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
 </style>

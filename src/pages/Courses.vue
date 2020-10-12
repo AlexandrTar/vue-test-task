@@ -33,7 +33,7 @@
       </div>
 
       <div class="courses__main_content">
-        <router-view />
+          <router-view />
       </div>
 
     </div>
@@ -56,7 +56,7 @@ name: "Courses",
   data() {
     return {
       tabs: [
-        {title: 'Tab 1', path: '/'},
+        {title: 'Tab 1', path: '/tab_1'},
         {title: 'Tab 2', path: '/tab_2'},
         {title: 'Tab 3', path: '/tab_3'}
       ]

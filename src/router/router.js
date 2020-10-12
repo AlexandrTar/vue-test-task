@@ -17,15 +17,15 @@ const routes = [
         component: () => import('@/pages/Courses'),
         children: [
             {
-                path: '/',
+                path: '/tab_1',
                 component: () => import('@/components/Tab-1')
             },
             {
-                path: 'tab_2',
+                path: '/tab_2',
                 component: () => import('@/components/Tab-2')
             },
             {
-                path: 'tab_3',
+                path: '/tab_3',
                 component: () => import('@/components/Tab-3')
             }
         ]
