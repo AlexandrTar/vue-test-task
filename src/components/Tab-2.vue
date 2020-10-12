@@ -1,5 +1,7 @@
 <template>
-  <h1>Tab 2</h1>
+  <div class="tabNumber">
+    <h2>Здесь мог бы быть Таб №2</h2>
+  </div>
 </template>
 
 <script>
@@ -8,6 +10,9 @@ name: "Tab-2"
 }
 </script>
 
-<style scoped>
-
+<style>
+.tabNumber {
+  display: flex;
+  justify-content: center;
+}
 </style>

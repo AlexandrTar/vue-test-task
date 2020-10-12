@@ -1,5 +1,7 @@
 <template>
-  <h1>Tab 3</h1>
+  <div class="tabNumber">
+    <h2>А здесь Таб №3</h2>
+  </div>
 </template>
 
 <script>
@@ -8,6 +10,5 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style>
 </style>

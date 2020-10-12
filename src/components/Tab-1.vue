@@ -173,6 +173,7 @@ name: "Tab-1",
   justify-content: center;
   align-items: center;
   border-radius: 6px;
+  cursor: pointer;
 }
 .title_h2 {
   font-weight: 500;

@@ -20,13 +20,14 @@
 </template>
 
 <script>
+
 export default {
 name: "Sidebar-categories",
   data() {
     return {
       categories: [
-        {title: 'Dashboard',image: 'image_1.svg', url: 'dashboard'},
-        {title: 'All courses', image: 'image_2.svg', url: 'tab_1'},
+        {title: 'Dashboard', image: 'image_1.svg', url: 'dashboard'},
+        {title: 'All courses', image: 'image_2.svg', url: ''},
         {title: 'Resources', image: 'image_3.svg', url: 'resources'},
         {title: 'Friends', image: 'image_4.svg', url: 'friends'},
         {title: 'Chats', image: 'image_5.svg', url: 'chats'},
@@ -60,9 +61,15 @@ name: "Sidebar-categories",
     margin-left: 26px;
   }
 }
+
+.category__image {
+  height: 20px;
+  width: 20px;
+}
 .active {
   color: #272829;
   border-right: 3px solid #5E81F4;
+  stroke: #5E81F4;
 }
 
 </style>

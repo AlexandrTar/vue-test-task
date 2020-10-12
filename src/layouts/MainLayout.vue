@@ -66,7 +66,7 @@ name: "mainLayout",
     height: 272px;
     width: 192px;
     display: flex;
-    margin: 53px 40px 0px 40px;
+    margin: 53px 40px 0 40px;
   }
 }
   .logo_image {

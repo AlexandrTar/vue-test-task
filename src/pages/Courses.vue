@@ -17,23 +17,20 @@
         <div class="title_tabs">
           <div
               v-for="tab in tabs"
-              :key="tab.title"
+               :key="tab.title"
           >
-            <router-link
-                :to="tab.path"
-                tag="div"
-                class="tab"
-                exact-active-class="tabActive"
-                :exact="tab.exact"
+            <div :class="{tabActive: currentView === `${tab.link}`}"
+                 class="tab"
+                 @click="switchView(`${tab.link}`)"
             >
               {{tab.title}}
-            </router-link>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="courses__main_content">
-          <router-view />
+          <component :is="currentView"></component>
       </div>
 
     </div>
@@ -48,18 +45,27 @@
 <script>
 import Search from "@/components/Search"
 import InfoBlock from "@/components/Info-block"
+import tab1 from '@/components/Tab-1'
+import tab2 from '@/components/Tab-2'
+import tab3 from '@/components/Tab-3'
 
 
 export default {
 name: "Courses",
-  components: {InfoBlock, Search},
+  components: {InfoBlock, Search, tab1, tab2, tab3},
   data() {
     return {
+      currentView: 'tab1',
       tabs: [
-        {title: 'Tab 1', path: '/tab_1'},
-        {title: 'Tab 2', path: '/tab_2'},
-        {title: 'Tab 3', path: '/tab_3'}
+        {title: 'Tab 1', link: 'tab1'},
+        {title: 'Tab 2', link: 'tab2'},
+        {title: 'Tab 3', link: 'tab3'},
       ]
+    }
+  },
+  methods: {
+    switchView(view) {
+      this.currentView = view
     }
   }
 }
@@ -113,12 +119,23 @@ name: "Courses",
   cursor: pointer;
 }
 .tabActive {
-  border-bottom: 2px solid $btnbg;
   color: $btnbg;
+}
+.tabActive:after {
+  content: "";
+  background-color: $btnbg;
+  height: 2px;
+  width: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 6px 0 0 30%;
+
 }
 
 .courses__info {
   padding: 40px;
 }
+
 
 </style>
